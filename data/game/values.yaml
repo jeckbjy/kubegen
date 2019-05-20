@@ -1,0 +1,4 @@
+aws:
+  IMAGE: xxx.dkr.ecr.us-east-1.amazonaws.com
+tencent:
+  IMAGE: ccr.ccs.tencentyun.com/xxx

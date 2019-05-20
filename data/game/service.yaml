@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ${APP}-${ENV}
+spec:
+  type: LoadBalancer
+  selector:
+    app: $APP
+    env: $ENV
+  ports:
+    - protocol: TCP
+      name: grpc
+      port: 1234
+      targetPort: 1234
+    - protocol: TCP
+      name: http
+      port: 80
+      targetPort: 8080

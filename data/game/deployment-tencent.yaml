@@ -1,0 +1,2 @@
+spec.template.spec.imagePullSecrets:
+  - name: tencloud-registry

@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: commgame-alpha
+spec:
+  type: LoadBalancer
+  selector:
+    app: commgame
+    env: alpha
+  ports:
+  - protocol: TCP
+    name: grpc
+    port: 1234
+    targetPort: 1234
+  - protocol: TCP
+    name: http
+    port: 80
+    targetPort: 8080
